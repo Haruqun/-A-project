@@ -75,9 +75,9 @@
 				<img class="mb-4" src="/img/logo.png" alt="" width="72" height="57">
 				<h1 class="h3 mb-3 fw-normal">{{ message }}</h1>
 				<label for="inputEmail" class="visually-hidden">メールアドレス</label>
-				<input v-model="email" id="inputEmail" class="form-control" placeholder="メールアドレス" required autofocus>
+				<input type="email" v-model="email" id="inputEmail" class="form-control" placeholder="メールアドレス" required autofocus>
 				<label for="inputPassword" class="visually-hidden">パスワード</label>
-				<input v-model="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
+				<input type="password" v-model="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
 				<div class="checkbox mb-3">
 					<label>
 						<input type="checkbox" v-model="remember-me" value="remember-me"> ログイン情報を記録する
