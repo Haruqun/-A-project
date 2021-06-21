@@ -76,6 +76,7 @@
 				<div v-cloak>
 					<transition appear name="fade">
 						<div v-show="show">
+							{{messages}}
 							<label for="inputEmail" class="visually-hidden">メールアドレス</label>
 							<input type="email" v-model="email" id="inputEmail" class="form-control" placeholder="メールアドレス" required autofocus>
 							<label for="inputPassword" class="visually-hidden">パスワード</label>
