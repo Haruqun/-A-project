@@ -74,7 +74,6 @@
 			<form>
 				<img class="mb-4" src="/img/logo.png" alt="" width="72" height="57">
 				<div v-cloak>
-					<transition> 
 						<h1 class="h3 mb-3 fw-normal">{{ message }}</h1>
 						<label for="inputEmail" class="visually-hidden">メールアドレス</label>
 						<input type="email" v-model="email" id="inputEmail" class="form-control" placeholder="メールアドレス" required autofocus>
@@ -87,7 +86,6 @@
 						</div>
 						<button class="w-100 btn btn-lg btn-primary" @click="show=!show">サインイン</button>
 						<p class="mt-5 mb-3 text-muted">&copy; Haru Studio 2021</p>
-					</transition>
 				</div>
 				
 			</form>
