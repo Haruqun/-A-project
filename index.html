@@ -75,18 +75,20 @@
 				<img class="mb-4" src="/img/logo.png" alt="" width="72" height="57">
 				<div v-cloak>
 					<transition appear name="fade">
-						
-						<label for="inputEmail" class="visually-hidden">メールアドレス</label>
-						<input type="email" v-model="email" id="inputEmail" class="form-control" placeholder="メールアドレス" required autofocus>
-						<label for="inputPassword" class="visually-hidden">パスワード</label>
-						<input type="password" v-model="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
-						<div class="checkbox mb-3">
-							<label>
-								<input type="checkbox" value="remember-me"> ログイン情報を記録する
-							</label>
+						<div v-show="show">
+							<label for="inputEmail" class="visually-hidden">メールアドレス</label>
+							<input type="email" v-model="email" id="inputEmail" class="form-control" placeholder="メールアドレス" required autofocus>
+							<label for="inputPassword" class="visually-hidden">パスワード</label>
+							<input type="password" v-model="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
+							<div class="checkbox mb-3">
+								<label>
+									<input type="checkbox" value="remember-me"> ログイン情報を記録する
+								</label>
+							</div>
+							<button class="w-100 btn btn-lg btn-primary" @click="show=!show">サインイン</button>
+							<p class="mt-5 mb-3 text-muted">&copy; Haru Studio 2021</p>
 						</div>
-						<button class="w-100 btn btn-lg btn-primary" @click="show=!show">サインイン</button>
-						<p class="mt-5 mb-3 text-muted">&copy; Haru Studio 2021</p>
+						
 					</transition>
 					<h1 class="h3 mb-3 fw-normal">{{ message }}</h1>
 					<label for="inputEmail" class="visually-hidden">メールアドレス</label>
