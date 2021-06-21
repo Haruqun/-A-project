@@ -73,11 +73,11 @@
 		<main class="form-signin">
 			<form>
 				<img class="mb-4" src="/img/logo.png" alt="" width="72" height="57">
-				<h1 class="h3 mb-3 fw-normal">{{ message }}</h1>
+				<h1 class="h3 mb-3 fw-normal" v-cloak>{{ message }}</h1>
 				<label for="inputEmail" class="visually-hidden">メールアドレス</label>
 				<input type="email" v-model="message" id="inputEmail" class="form-control" placeholder="メールアドレス" required autofocus>
 				<label for="inputPassword" class="visually-hidden">パスワード</label>
-				<input type="password" v-model="password" id="inputPassword" class="form-control" placeholder="パスワード" required>
+				<input type="password" v-model="password" v-cloak id="inputPassword" class="form-control" placeholder="パスワード" required>
 				<div class="checkbox mb-3">
 					<label>
 						<input type="checkbox" value="remember-me"> ログイン情報を記録する
@@ -105,14 +105,17 @@
 	<!-- 本番バージョン、サイズと速度のために最適化されています -->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 	<script>
-		var app = new Vue({
-			el: '.form-signin',
-			data: {
-				message: 'Hello Vue!',
-				email: 'sample@sample.com',
-				password: '123123123'
-			}
-		})
+		
+		window.setTimeout(function() {
+			var app = new Vue({
+				el: '.form-signin',
+				data: {
+					message: 'Hello Vue!',
+					email: 'sample@sample.com',
+					password: '123123123'
+				}
+			})
+		}, 1000);
 	</script>
   </body>
 </html>
