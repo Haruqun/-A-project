@@ -76,7 +76,7 @@
 				<div v-cloak>
 					<transition appear name="fade">
 						<div v-show="show">
-							{{message}}
+							<h1 class="h3 mb-3 fw-normal">{{ message }}</h1>
 							<label for="inputEmail" class="visually-hidden">メールアドレス</label>
 							<input type="email" v-model="email" id="inputEmail" class="form-control" placeholder="メールアドレス" required autofocus>
 							<label for="inputPassword" class="visually-hidden">パスワード</label>
@@ -89,7 +89,6 @@
 							<button class="w-100 btn btn-lg btn-primary" @click="show=!show">サインイン</button>
 							<p class="mt-5 mb-3 text-muted">&copy; Haru Studio 2021</p>
 						</div>
-						
 					</transition>
 					
 				</div>
