@@ -87,18 +87,18 @@
 					<button class="w-100 btn btn-lg btn-primary" @click="show=!show">サインイン</button>
 					<p class="mt-5 mb-3 text-muted">&copy; Haru Studio 2021</p>
 					
-					<div id="demo">
-						  <button v-on:click="show = !show">
-							Toggle
-						  </button>
-						  <transition name="fade">
-							<p v-if="show">hello</p>
-						  </transition>
-						</div>
 					
 				</div>
 				
 			</form>
+			<div id="demo">
+				  <button v-on:click="show = !show">
+					Toggle
+				  </button>
+				  <transition name="fade">
+					<p v-if="show">hello</p>
+				  </transition>
+				</div>
 		</main>
 		
 
