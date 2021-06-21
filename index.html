@@ -88,6 +88,20 @@
 					<button class="w-100 btn btn-lg btn-primary" type="submit">サインイン</button>
 					<p class="mt-5 mb-3 text-muted">&copy; Haru Studio 2021</p>
 				</div>
+				
+				<div id="app">
+					  <button @click="show=!show">
+						click
+					  </button>
+					  <!-- transition タグで囲みます。 -->
+					  <transition> 
+						<!-- 配下の DOM は１つだけ -->
+						<div v-if="show"> 
+						  Hello, world!
+						</div>
+					  </transition>
+					</div>
+				
 			</form>
 		</main>
 		
@@ -118,6 +132,14 @@
 					password: '123123123'
 				}
 			})
+			
+			new Vue({
+				  el: '#app',
+				  data: {
+					show: true,
+				  }
+				})
+			
 		}, 1000);
 	</script>
   </body>
