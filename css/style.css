@@ -1,1 +1,39 @@
 [v-cloak] { display: none }
+
+/* はじめ */
+.v-enter {
+  /* 最初は表示して欲しくないので 0 */
+  opacity: 0;
+}
+/* transition している間 */
+.v-enter-active {
+  transition: opacity 1s
+}
+/* おわり */
+.v-enter-to {
+  /* 終わったら表示して欲しいので 1 */
+  opacity: 1;
+}
+
+
+div.click{
+  cursor: pointer;
+}
+ 
+[v-cloak] {
+  display: none;
+}
+ 
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+ 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter-to,
+.fade-leave {
+  opacity: 1;
+}
